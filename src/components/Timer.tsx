@@ -166,7 +166,7 @@ export default function Timer({ workout, onDone, onEnd }: Props) {
               : { color: 'var(--color-muted-foreground)' }
           }
         >
-          <p className="text-2xl font-bold font-mono">
+          <p className="text-2xl font-bold font-mono text-center">
             {nextPhaseLabel(state, workout)}
           </p>
           <p

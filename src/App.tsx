@@ -7,7 +7,7 @@ import Done from '@/components/Done'
 type Screen =
   | { name: 'list' }
   | { name: 'timer'; workout: Workout }
-  | { name: 'done'; workout: Workout }
+  | { name: 'done' }
 
 export default function App() {
   const [screen, setScreen] = useState<Screen>({ name: 'list' })
@@ -16,7 +16,7 @@ export default function App() {
     return (
       <Timer
         workout={screen.workout}
-        onDone={() => setScreen({ name: 'done', workout: screen.workout })}
+        onDone={() => setScreen({ name: 'done' })}
         onEnd={() => setScreen({ name: 'list' })}
       />
     )
@@ -24,10 +24,7 @@ export default function App() {
 
   if (screen.name === 'done') {
     return (
-      <Done
-        workoutName={screen.workout.name}
-        onBack={() => setScreen({ name: 'list' })}
-      />
+      <Done onBack={() => setScreen({ name: 'list' })} />
     )
   }
 

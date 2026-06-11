@@ -29,7 +29,7 @@ export default function WorkoutList({ onStart }: Props) {
                   <span className="text-base font-mono text-tne-bg">{formatTime(totalWorkoutDuration(workout))}</span>
                 </div>
                 <div className="flex gap-4 text-base" style={{ color: 'rgba(45,45,45,0.7)' }}>
-                  <span>{workout.setCount} sets</span>
+                  <span>{workout.setCount} {workout.setCount === 1 ? 'set' : 'sets'}</span>
                   <span>{formatDuration(workout.setDuration)} work</span>
                   <span>{formatDuration(workout.restDuration)} rest</span>
                 </div>
