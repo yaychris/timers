@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create *)",
+      "Bash(cd /tmp && npm create vite@latest timers-scaffold -- --template react-ts 2>&1)",
+      "Bash(npm install *)",
+      "Bash(npx shadcn@latest init --defaults)",
+      "Bash(npm run *)",
+      "Bash(npx shadcn@latest add card)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}
