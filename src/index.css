@@ -5,25 +5,23 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme {
-  /* Tomorrow Night Eighties */
-  --color-tne-bg: #2d2d2d;
-  --color-tne-line: #393939;
-  --color-tne-selection: #515151;
-  --color-tne-fg: #cccccc;
-  --color-tne-comment: #999999;
-  --color-tne-red: #f2777a;
-  --color-tne-orange: #f99157;
-  --color-tne-yellow: #ffcc66;
-  --color-tne-green: #99cc99;
-  --color-tne-aqua: #66cccc;
-  --color-tne-blue: #6699cc;
-  --color-tne-purple: #cc99cc;
-}
-
 @theme inline {
   --font-heading: var(--font-sans);
   --font-sans: 'Geist Variable', sans-serif;
+
+  /* Tomorrow Night Eighties — var() refs so Tailwind utility classes resolve at runtime */
+  --color-tne-bg: var(--color-tne-bg);
+  --color-tne-line: var(--color-tne-line);
+  --color-tne-selection: var(--color-tne-selection);
+  --color-tne-fg: var(--color-tne-fg);
+  --color-tne-comment: var(--color-tne-comment);
+  --color-tne-red: var(--color-tne-red);
+  --color-tne-orange: var(--color-tne-orange);
+  --color-tne-yellow: var(--color-tne-yellow);
+  --color-tne-green: var(--color-tne-green);
+  --color-tne-aqua: var(--color-tne-aqua);
+  --color-tne-blue: var(--color-tne-blue);
+  --color-tne-purple: var(--color-tne-purple);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -65,6 +63,19 @@
 }
 
 :root {
+  /* Tomorrow Night Eighties */
+  --color-tne-bg: #2d2d2d;
+  --color-tne-line: #393939;
+  --color-tne-selection: #515151;
+  --color-tne-fg: #cccccc;
+  --color-tne-comment: #999999;
+  --color-tne-red: #f2777a;
+  --color-tne-orange: #f99157;
+  --color-tne-yellow: #ffcc66;
+  --color-tne-green: #99cc99;
+  --color-tne-aqua: #66cccc;
+  --color-tne-blue: #6699cc;
+  --color-tne-purple: #cc99cc;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);

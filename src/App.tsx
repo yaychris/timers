@@ -23,9 +23,7 @@ export default function App() {
   }
 
   if (screen.name === 'done') {
-    return (
-      <Done onBack={() => setScreen({ name: 'list' })} />
-    )
+    return <Done onBack={() => setScreen({ name: 'list' })} />
   }
 
   return (
