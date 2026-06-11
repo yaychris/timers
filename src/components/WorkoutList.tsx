@@ -15,7 +15,7 @@ export default function WorkoutList({ onStart }: Props) {
   return (
     <div className="flex flex-col items-center gap-8 w-full">
       <h1 className="text-3xl font-semibold font-mono pt-8">Workouts</h1>
-      <ul className="flex flex-col gap-3 w-full">
+      <ul className="flex flex-col w-full">
         {workouts.map((workout) => (
           <li key={workout.name}>
             <Card
