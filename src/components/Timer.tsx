@@ -93,6 +93,14 @@ export default function Timer({ workout, onDone, onEnd }: Props) {
     setPaused(false)
   }
 
+  useEffect(() => {
+    if (paused || state.done) return
+    if (!('wakeLock' in navigator)) return
+    let lock: WakeLockSentinel | null = null
+    navigator.wakeLock.request('screen').then((l) => { lock = l })
+    return () => { lock?.release() }
+  }, [paused, state.done])
+
   const onDoneRef = useRef(onDone)
   useEffect(() => {
     onDoneRef.current = onDone
