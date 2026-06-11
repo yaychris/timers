@@ -3,7 +3,7 @@ import type { Workout } from './types'
 export const workouts: Workout[] = [
   {
     name: 'Wrist stretch',
-    color: 'purple',
+    color: 'orange',
     preStartDuration: 15,
     setCount: 6,
     setDuration: 30,
@@ -11,7 +11,7 @@ export const workouts: Workout[] = [
   },
   {
     name: 'Iso wrist extension',
-    color: 'blue',
+    color: 'yellow',
     preStartDuration: 10,
     setCount: 5,
     setDuration: 45,
@@ -19,7 +19,7 @@ export const workouts: Workout[] = [
   },
   {
     name: 'Rice bucket',
-    color: 'aqua',
+    color: 'green',
     preStartDuration: 10,
     setCount: 6,
     setDuration: 30,
@@ -27,7 +27,7 @@ export const workouts: Workout[] = [
   },
   {
     name: 'Test',
-    color: 'green',
+    color: 'aqua',
     preStartDuration: 5,
     setCount: 2,
     setDuration: 5,
