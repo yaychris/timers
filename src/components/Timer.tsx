@@ -97,8 +97,12 @@ export default function Timer({ workout, onDone, onEnd }: Props) {
     if (paused || state.done) return
     if (!('wakeLock' in navigator)) return
     let lock: WakeLockSentinel | null = null
-    navigator.wakeLock.request('screen').then((l) => { lock = l })
-    return () => { lock?.release() }
+    navigator.wakeLock.request('screen').then((l) => {
+      lock = l
+    })
+    return () => {
+      lock?.release()
+    }
   }, [paused, state.done])
 
   const onDoneRef = useRef(onDone)
@@ -144,7 +148,7 @@ export default function Timer({ workout, onDone, onEnd }: Props) {
         : phaseColors.rest
 
   return (
-    <div className="flex flex-col items-center justify-start md:justify-center min-h-screen gap-6">
+    <div className="flex flex-col items-center justify-center min-h-screen gap-6">
       <p className="text-lg font-medium text-muted-foreground tabular-nums flex items-center gap-3">
         <span>{formatTime(totalTimeRemaining(state, workout))}</span>
         <span className="text-muted-foreground/40">|</span>
