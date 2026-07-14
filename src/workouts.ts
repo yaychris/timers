@@ -2,6 +2,14 @@ import type { Workout } from './types'
 
 export const workouts: Workout[] = [
   {
+    name: 'Tennis Elbow Isos',
+    color: 'red',
+    preStartDuration: 10,
+    setCount: 8,
+    setDuration: 30,
+    restDuration: 45,
+  },
+  {
     name: 'Wrist stretch',
     color: 'orange',
     preStartDuration: 10,
@@ -24,13 +32,5 @@ export const workouts: Workout[] = [
     setCount: 5,
     setDuration: 45,
     restDuration: 60,
-  },
-  {
-    name: 'Test',
-    color: 'aqua',
-    preStartDuration: 5,
-    setCount: 2,
-    setDuration: 5,
-    restDuration: 5,
   },
 ]
